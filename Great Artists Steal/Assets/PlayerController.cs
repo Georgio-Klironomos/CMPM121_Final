@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private int winCount;
 
     public Text counter;
+    public Image caught;
 
     void Start()
     {
@@ -43,15 +44,32 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        Debug.Log("Collide2");
+        Debug.Log("enter");
         if (other.gameObject.CompareTag("comp"))
         {
-            Debug.Log("Collide2");
             other.gameObject.SetActive(false);
             count += 1;
             SetCountText();
             bulbs.Play();
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("alarm"))
+        {
+            Debug.Log("caught");
+            StartCoroutine(alarmTriggered());
+        }
+    }
+
+    IEnumerator alarmTriggered()
+    {
+        //caught.enabled = true;
+        Debug.Log("caught2");
+        yield return new WaitForSeconds(5);
+        Scene loadedLevel = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(loadedLevel.buildIndex);
     }
 
     void SetCountText()
