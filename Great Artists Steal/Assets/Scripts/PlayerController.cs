@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         //gameObject.transform.position = new Vector3(0, 5, 0);
-
+        caught.enabled = false;
         animator.SetBool("Grounded", true);
     }
 
@@ -65,9 +65,9 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator alarmTriggered()
     {
-        //caught.enabled = true;
+        caught.enabled = true;
         Debug.Log("caught2");
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
         Scene loadedLevel = SceneManager.GetActiveScene();
         SceneManager.LoadScene(loadedLevel.buildIndex);
     }

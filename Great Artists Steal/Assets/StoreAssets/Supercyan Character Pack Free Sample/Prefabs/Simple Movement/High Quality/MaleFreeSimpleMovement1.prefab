@@ -220,12 +220,12 @@ ParticleSystem:
         m_RotationOrder: 4
     startColor:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 4
       minColor: {r: 1, g: 1, b: 1, a: 1}
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 1}
+        key0: {r: 1, g: 0.95003486, b: 0.033018887, a: 1}
         key1: {r: 1, g: 1, b: 1, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
@@ -5678,7 +5678,7 @@ GameObject:
   - component: {fileID: 1350857201}
   m_Layer: 0
   m_Name: MaleFreeSimpleMovement1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5761,15 +5761,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f23748c1fff69b47938a58d56117547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_moveSpeed: 2
-  m_turnSpeed: 200
-  m_jumpForce: 4
-  m_animator: {fileID: 95665039525092722}
-  m_rigidBody: {fileID: 54084939265967506}
+  moveSpeed: 2
+  turnSpeed: 200
+  animator: {fileID: 95665039525092722}
   bulbs: {fileID: 240969022}
   count: 0
-  winCount: 4
+  winCount: 10
   counter: {fileID: 0}
+  caught: {fileID: 0}
 --- !u!1 &1826566120413068
 GameObject:
   m_ObjectHideFlags: 0
