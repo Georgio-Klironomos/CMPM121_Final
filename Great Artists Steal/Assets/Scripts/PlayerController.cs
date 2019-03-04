@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
 
     public int count;
     [SerializeField] private int winCount;
+    [SerializeField] private int loseCount = 0;
+
 
     public Text counter;
     public Image caught;
@@ -67,9 +69,17 @@ public class PlayerController : MonoBehaviour
     {
         caught.enabled = true;
         Debug.Log("caught2");
+        loseCount++;
         yield return new WaitForSeconds(3);
-        Scene loadedLevel = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(loadedLevel.buildIndex);
+        if (loseCount >= 3)
+        {
+            SceneManager.LoadScene(4);
+        }
+        else
+        {
+            Scene loadedLevel = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(loadedLevel.buildIndex);
+        }
     }
 
     void SetCountText()
