@@ -8,7 +8,7 @@ public class floorScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mf.GetComponent<Renderer>().material.color = Color.grey;
+        mf.GetComponent<Renderer>().material.color = Color.white;
     }
 
     // Update is called once per frame

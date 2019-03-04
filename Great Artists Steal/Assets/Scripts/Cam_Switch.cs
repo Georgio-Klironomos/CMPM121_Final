@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class Cam_Switch : MonoBehaviour
 {
-    public Camera first;
-    public Camera second;
-    bool cam = false;
+    [SerializeField] private Camera firstCam;
+    [SerializeField] private Camera secondCam;
+    [SerializeField] private GameObject firstLight;
+    [SerializeField] private GameObject secondLight;
+
+
+    bool camSwitch = false;
 
     void Start()
     {
-        second.enabled = false;
+        secondCam.enabled = false;
+        secondLight.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -26,8 +31,11 @@ public class Cam_Switch : MonoBehaviour
 
     public void CamSwitch()
     {
-        first.enabled = cam;
-        second.enabled = !cam;
-        cam = !cam;
+        firstCam.enabled = camSwitch;
+        secondCam.enabled = !camSwitch;
+        firstLight.SetActive(camSwitch);
+        secondLight.SetActive(!camSwitch);
+
+        camSwitch = !camSwitch;
     }
 }
