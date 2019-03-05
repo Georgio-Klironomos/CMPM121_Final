@@ -11,20 +11,23 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float turnSpeed = 200;
     [SerializeField] private Animator animator;
     [SerializeField] private ParticleSystem bulbs;
+    [SerializeField] private Transform playerPos;
 
     public int count;
     [SerializeField] private int winCount;
     [SerializeField] private int loseCount = 0;
-
+    private Vector3 checkPoint;
 
     public Text counter;
     public Image caught;
 
     void Start()
     {
-        //gameObject.transform.position = new Vector3(0, 5, 0);
+        playerPos = this.GetComponent<Transform>();
+        
         caught.enabled = false;
         animator.SetBool("Grounded", true);
+        checkPoint = transform.position;
     }
 
     void Update()
@@ -77,8 +80,10 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            Scene loadedLevel = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(loadedLevel.buildIndex);
+            transform.position = checkPoint;
+            caught.enabled = false;
+            //Scene loadedLevel = SceneManager.GetActiveScene();
+            //SceneManager.LoadScene(loadedLevel.buildIndex);
         }
     }
 
