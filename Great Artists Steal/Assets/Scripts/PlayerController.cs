@@ -8,26 +8,23 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 2;
-    [SerializeField] private float turnSpeed = 200;
+    [SerializeField] private float turnSpeed = 300;
     [SerializeField] private Animator animator;
     [SerializeField] private ParticleSystem bulbs;
-    [SerializeField] private Transform playerPos;
 
     public int count;
     [SerializeField] private int winCount;
-    [SerializeField] private int loseCount = 0;
-    private Vector3 checkPoint;
+    //[SerializeField] private int loseCount = 0;
+    //private Vector3 checkPoint;
 
     public Text counter;
-    public Image caught;
+    //public Image caught;
 
     void Start()
     {
-        playerPos = this.GetComponent<Transform>();
-        
-        caught.enabled = false;
+        //caught.enabled = false;
         animator.SetBool("Grounded", true);
-        checkPoint = transform.position;
+        //checkPoint = transform.position;
     }
 
     void Update()
@@ -59,7 +56,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+   /* private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("alarm"))
         {
@@ -85,7 +82,7 @@ public class PlayerController : MonoBehaviour
             //Scene loadedLevel = SceneManager.GetActiveScene();
             //SceneManager.LoadScene(loadedLevel.buildIndex);
         }
-    }
+    }*/
 
     void SetCountText()
     {
