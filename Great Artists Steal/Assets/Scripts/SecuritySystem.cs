@@ -13,7 +13,7 @@ public class SecuritySystem : MonoBehaviour
     private bool catching = true;
 
     public Image caught;
-
+    [SerializeField] private PlayerController student;
 
     [SerializeField] private Camera firstCam;
     [SerializeField] private Camera secondCam;
@@ -38,7 +38,7 @@ public class SecuritySystem : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("alarm") && catching)
+        if (other.gameObject.CompareTag("alarm") && catching && student.visible)
         {
             catching = false;
             Debug.Log("caught");

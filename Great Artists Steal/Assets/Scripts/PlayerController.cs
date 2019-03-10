@@ -11,14 +11,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float turnSpeed = 300;
     [SerializeField] private Animator animator;
     [SerializeField] private ParticleSystem bulbs;
+    [SerializeField] private bool snatch;
+
+    public bool visible = true;
 
     public int count;
     [SerializeField] private int winCount;
-    //[SerializeField] private int loseCount = 0;
-    //private Vector3 checkPoint;
 
     public Text counter;
-    //public Image caught;
+
 
     void Start()
     {
@@ -33,9 +34,17 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene(0);
         }
-        
+
         float v = Input.GetAxis("Vertical");
         float h = Input.GetAxis("Horizontal");
+        if(Input.GetAxis("Jump") > 0)
+        {
+            snatch = true;
+        }
+        else
+        {
+            snatch = false;
+        }
 
         animator.SetFloat("MoveSpeed", v);
 
@@ -44,10 +53,10 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    void OnCollisionEnter(Collision other)
+    void OnCollisionStay(Collision other)
     {
         Debug.Log("enter");
-        if (other.gameObject.CompareTag("comp"))
+        if (other.gameObject.CompareTag("comp") && snatch == true)
         {
             other.gameObject.SetActive(false);
             count += 1;
@@ -56,33 +65,21 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-   /* private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("alarm"))
+        if (other.gameObject.CompareTag("comp"))
         {
-            Debug.Log("caught");
-            StartCoroutine(alarmTriggered());
+            visible = false;
         }
     }
 
-    IEnumerator alarmTriggered()
+    private void OnTriggerExit(Collider other)
     {
-        caught.enabled = true;
-        Debug.Log("caught2");
-        loseCount++;
-        yield return new WaitForSeconds(3);
-        if (loseCount >= 3)
+        if (other.gameObject.CompareTag("comp"))
         {
-            SceneManager.LoadScene(4);
+            visible = true;
         }
-        else
-        {
-            transform.position = checkPoint;
-            caught.enabled = false;
-            //Scene loadedLevel = SceneManager.GetActiveScene();
-            //SceneManager.LoadScene(loadedLevel.buildIndex);
-        }
-    }*/
+    }
 
     void SetCountText()
     {

@@ -1436,6 +1436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loseCount: 0
   caught: {fileID: 1012593199}
+  student: {fileID: 1350857201}
   firstCam: {fileID: 534669904}
   secondCam: {fileID: 972489972}
   thirdCam: {fileID: 1285194484}
@@ -2277,7 +2278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4321026226760780, guid: 7e9db585073230b438ac03f1ddea8b07, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.024054
+      value: 9.014
       objectReference: {fileID: 0}
     - target: {fileID: 4321026226760780, guid: 7e9db585073230b438ac03f1ddea8b07, type: 3}
       propertyPath: m_LocalRotation.x
@@ -3870,6 +3871,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1018790967}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1734504804
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734504803}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5145124, y: -0.22, z: 0.5145126}
+  m_Center: {x: 0, y: 0.13, z: 0.25}
 --- !u!4 &1734504807 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4321026226760780, guid: 7e9db585073230b438ac03f1ddea8b07,
@@ -4289,6 +4303,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.08, z: 0.95}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &1998348757
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998348753}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.3, z: 1}
+  m_Center: {x: 0, y: 0.21, z: 0}
 --- !u!1001 &2025585363
 PrefabInstance:
   m_ObjectHideFlags: 0
