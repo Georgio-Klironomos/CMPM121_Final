@@ -5676,6 +5676,7 @@ GameObject:
   - component: {fileID: 136606663363984694}
   - component: {fileID: 95665039525092722}
   - component: {fileID: 1350857201}
+  - component: {fileID: 848680879}
   m_Layer: 0
   m_Name: MaleFreeSimpleMovement1
   m_TagString: Player
@@ -5765,10 +5766,32 @@ MonoBehaviour:
   turnSpeed: 200
   animator: {fileID: 95665039525092722}
   bulbs: {fileID: 240969022}
+  snatch: 0
+  visible: 1
   count: 0
   winCount: 10
   counter: {fileID: 0}
+--- !u!114 &848680879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824340380413090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e9b2c5f07d33491c9f98c7fe8178144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loseCount: 0
   caught: {fileID: 0}
+  student: {fileID: 1350857201}
+  firstCam: {fileID: 0}
+  secondCam: {fileID: 0}
+  thirdCam: {fileID: 0}
+  firstLight: {fileID: 0}
+  secondLight: {fileID: 0}
+  thirdLight: {fileID: 0}
 --- !u!1 &1826566120413068
 GameObject:
   m_ObjectHideFlags: 0
