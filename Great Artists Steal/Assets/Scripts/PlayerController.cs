@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour
 
     void SetCountText()
     {
-        counter.text = count.ToString() + " Inspiration";
+        counter.text = count.ToString() + " Portfolio Piece";
         if (count != 1)
         {
             counter.text += "s";
