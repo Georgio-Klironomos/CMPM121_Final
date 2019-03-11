@@ -55,18 +55,19 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionStay(Collision other)
     {
-        Debug.Log("enter");
         if (other.gameObject.CompareTag("comp") && snatch == true)
         {
             other.gameObject.SetActive(false);
             count += 1;
             SetCountText();
             bulbs.Play();
+            visible = true;
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("enter");
         if (other.gameObject.CompareTag("comp"))
         {
             visible = false;
@@ -75,6 +76,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        Debug.Log("exit");
         if (other.gameObject.CompareTag("comp"))
         {
             visible = true;
