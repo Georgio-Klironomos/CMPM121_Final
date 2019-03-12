@@ -49,38 +49,40 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("MoveSpeed", v);
 
         transform.position += transform.forward * v * moveSpeed * Time.deltaTime;
+        transform.position += transform.right * h * Time.deltaTime;
         transform.Rotate(0, h * turnSpeed * Time.deltaTime, 0);
-
+        //transform.position
     }
 
-    void OnCollisionStay(Collision other)
+    void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("comp") && snatch == true)
+        if (other.gameObject.CompareTag("comp"))
         {
-            other.gameObject.SetActive(false);
-            count += 1;
-            SetCountText();
-            bulbs.Play();
-            visible = true;
+            visible = false;
+            if (snatch == true)
+            {
+                other.gameObject.SetActive(false);
+                count += 1;
+                SetCountText();
+                bulbs.Play();
+                visible = true;
+            }
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
         Debug.Log("enter");
         if (other.gameObject.CompareTag("comp"))
         {
             visible = false;
         }
-    }
+    }*/
 
     private void OnTriggerExit(Collider other)
     {
         Debug.Log("exit");
-        if (other.gameObject.CompareTag("comp"))
-        {
-            visible = true;
-        }
+        visible |= other.gameObject.CompareTag("comp");
     }
 
     void SetCountText()
