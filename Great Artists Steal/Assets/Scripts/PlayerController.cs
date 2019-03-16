@@ -17,12 +17,15 @@ public class PlayerController : MonoBehaviour
 
     public int count;
     [SerializeField] private int winCount;
+    private int buildNum = 0;
 
     public Text counter;
 
 
     void Start()
     {
+        Scene scene = SceneManager.GetActiveScene();
+        buildNum = scene.buildIndex;
         //caught.enabled = false;
         animator.SetBool("Grounded", true);
         //checkPoint = transform.position;
@@ -32,7 +35,7 @@ public class PlayerController : MonoBehaviour
     {
         if (count >= winCount)
         {
-            SceneManager.LoadScene(0);
+            WinState();
         }
 
         float v = Input.GetAxis("Vertical");
@@ -70,15 +73,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    /*private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("enter");
-        if (other.gameObject.CompareTag("comp"))
-        {
-            visible = false;
-        }
-    }*/
-
     private void OnTriggerExit(Collider other)
     {
         Debug.Log("exit");
@@ -92,5 +86,14 @@ public class PlayerController : MonoBehaviour
         {
             counter.text += "s";
         }
+    }
+
+    private void WinState() {
+        if(buildNum != 3) {
+                SceneManager.LoadScene(buildNum + 1);
+            }
+            else {
+                SceneManager.LoadScene(0);
+            }
     }
 }
