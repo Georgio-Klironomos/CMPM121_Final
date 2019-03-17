@@ -23,6 +23,8 @@ public class SecuritySystem : MonoBehaviour
     [SerializeField] private GameObject secondLight;
     [SerializeField] private GameObject thirdLight;
 
+    [SerializeField] private AudioSource bells;
+
 
     // Start is called before the first frame update
     void Start()
@@ -64,10 +66,13 @@ public class SecuritySystem : MonoBehaviour
     IEnumerator AlarmTriggered()
     {
         caught.enabled = true;
-
+        if(!bells.isPlaying) {
+            bells.Play();
+        }
         Debug.Log("caught2");
         loseCount++;
         yield return new WaitForSeconds(3);
+        bells.Pause();
         catching = true;
         if (loseCount >= 3)
         {

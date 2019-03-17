@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float turnSpeed = 300;
     [SerializeField] private Animator animator;
     [SerializeField] private ParticleSystem bulbs;
+    [SerializeField] private AudioSource swipe;
     [SerializeField] private bool snatch;
 
     public bool visible = true;
@@ -39,6 +40,14 @@ public class PlayerController : MonoBehaviour
         }
 
         float v = Input.GetAxis("Vertical");
+        if(v != 0) {
+            if(!GetComponent<AudioSource>().isPlaying) {
+                GetComponent<AudioSource>().Play();
+            }
+        }
+        else {
+            GetComponent<AudioSource>().Pause();
+        }
         float h = Input.GetAxis("Horizontal");
         if(Input.GetAxis("Jump") > 0)
         {
@@ -64,6 +73,9 @@ public class PlayerController : MonoBehaviour
             visible = false;
             if (snatch == true)
             {
+                if(!swipe.isPlaying) {
+                    swipe.Play();
+                }
                 other.gameObject.SetActive(false);
                 count += 1;
                 SetCountText();
