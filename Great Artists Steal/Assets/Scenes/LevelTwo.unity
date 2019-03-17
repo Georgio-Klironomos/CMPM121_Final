@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731196, g: 0.38074002, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -808,13 +808,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 241072490}
-  m_LocalRotation: {x: 0.26134688, y: 0, z: 0, w: 0.96524495}
-  m_LocalPosition: {x: 12.7, y: 2.657, z: -7.64}
+  m_LocalRotation: {x: 0.22886117, y: 0.08101841, z: -0.009736547, w: 0.97003293}
+  m_LocalPosition: {x: 9.35, y: 1.2600002, z: -7.5699997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1262336158}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 30.3, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 26.461, y: 9.8220005, z: 1.1650001}
 --- !u!81 &241072492
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1027,6 +1027,10 @@ PrefabInstance:
       propertyPath: counter
       value: 
       objectReference: {fileID: 1570185456}
+    - target: {fileID: 1350857201, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
+      propertyPath: winCount
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4549428611729446, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.06
@@ -3924,13 +3928,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1432402141}
-  m_LocalRotation: {x: 0.22018673, y: 0, z: 0, w: 0.9754578}
-  m_LocalPosition: {x: -13.77, y: 1.81, z: -7.91}
+  m_LocalRotation: {x: 0.24458994, y: -0.17338163, z: 0.011651178, w: 0.9539282}
+  m_LocalPosition: {x: -10.55, y: 1.35, z: -8.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1262336158}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 25.44, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 28.079, y: -21.62, z: -4.0680003}
 --- !u!81 &1432402143
 AudioListener:
   m_ObjectHideFlags: 0

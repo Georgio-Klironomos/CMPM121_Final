@@ -71,7 +71,7 @@ public class SecuritySystem : MonoBehaviour
         catching = true;
         if (loseCount >= 3)
         {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(5);
         }
         else
         {

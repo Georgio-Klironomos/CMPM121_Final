@@ -89,6 +89,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void WinState() {
+        
         if(buildNum != 3) {
                 SceneManager.LoadScene(buildNum + 1);
             }
