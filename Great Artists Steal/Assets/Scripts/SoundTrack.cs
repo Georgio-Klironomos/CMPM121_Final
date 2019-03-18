@@ -13,7 +13,7 @@ public class SoundTrack : MonoBehaviour
     void Update() {
         Scene scene = SceneManager.GetActiveScene();
         buildNum = scene.buildIndex;
-        if(buildNum == 4) {
+        if(buildNum > 3 ) {
             Destroy(this.gameObject);
         }
     }

@@ -25,6 +25,10 @@ public class SecuritySystem : MonoBehaviour
 
     [SerializeField] private AudioSource bells;
 
+    public Text counter;
+    public Text counter1;
+    
+
 
     // Start is called before the first frame update
     void Start()
@@ -71,10 +75,11 @@ public class SecuritySystem : MonoBehaviour
         }
         Debug.Log("caught2");
         loseCount++;
+        SetLoseText();
         yield return new WaitForSeconds(3);
         bells.Pause();
         catching = true;
-        if (loseCount >= 3)
+        if (loseCount >= 5)
         {
             SceneManager.LoadScene(5);
         }
@@ -97,5 +102,10 @@ public class SecuritySystem : MonoBehaviour
 
         cNext.enabled = true;
         lNext.SetActive(true);
+    }
+    void SetLoseText()
+    {
+        counter.text = loseCount.ToString() + "/5 Alarms Triggered";
+        counter1.text = loseCount.ToString() + "/5 Alarms Triggered";
     }
 }
