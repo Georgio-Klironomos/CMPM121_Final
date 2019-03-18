@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
                 GetComponent<AudioSource>().Pause();
             }
             float h = Input.GetAxis("Horizontal");
-            if(Input.GetAxis("Jump") > 0)
+            if(Input.GetAxis("Jump") > 0 && buildNum !=3)
             {
                 snatch = true;
             }
@@ -68,6 +68,13 @@ public class PlayerController : MonoBehaviour
             transform.position += transform.right * h * Time.deltaTime;
             transform.Rotate(0, h * turnSpeed * Time.deltaTime, 0);
             //transform.position
+        }
+    }
+
+    void OnTriggerEnter(Collider other) {
+        Debug.Log("enter");
+        if(other.gameObject.CompareTag("window")) {
+            WinState();
         }
     }
 
@@ -92,7 +99,6 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("exit");
         visible |= other.gameObject.CompareTag("comp");
     }
 
@@ -116,7 +122,7 @@ public class PlayerController : MonoBehaviour
                 SceneManager.LoadScene(buildNum + 1);
             }
             else {
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(4);
             }
     }
 }
