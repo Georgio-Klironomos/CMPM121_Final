@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class SecuritySystem : MonoBehaviour
 {
 
-    [SerializeField] private int loseCount = 0;
+    public int loseCount = 0;
     private Vector3 checkPoint;
     private bool catching = true;
 
