@@ -295,7 +295,7 @@ SpriteRenderer:
   m_Size: {x: 1.92, y: 1.44}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &125896924
@@ -324,9 +324,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4483e8e5ced0b2459101f41ad4dcbe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opener: {fileID: 125896921}
-  player: {fileID: 1350857201}
-  openCount: 3
 --- !u!1 &164174421
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,7 +510,6 @@ GameObject:
   - component: {fileID: 188434217}
   - component: {fileID: 188434216}
   - component: {fileID: 188434215}
-  - component: {fileID: 188434219}
   m_Layer: 0
   m_Name: floor
   m_TagString: Untagged
@@ -593,19 +589,6 @@ Transform:
   m_Father: {fileID: 67437604}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &188434219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 188434214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cc10cc6228eaab4881e2085de126038, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mf: {fileID: 188434214}
 --- !u!114 &202643339 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 202643339, guid: ab9078f82445d4e1abe5dc9ab8551d89,
@@ -2356,9 +2339,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4483e8e5ced0b2459101f41ad4dcbe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opener: {fileID: 1017008119}
-  player: {fileID: 1350857201}
-  openCount: 6
 --- !u!65 &1017008121
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2417,7 +2397,7 @@ SpriteRenderer:
   m_Size: {x: 1.92, y: 1.44}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1017008123
@@ -3904,6 +3884,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: Student
       objectReference: {fileID: 0}
+    - target: {fileID: 848680879, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
+      propertyPath: caught
+      value: 
+      objectReference: {fileID: 1012593199}
+    - target: {fileID: 848680879, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
+      propertyPath: firstCam
+      value: 
+      objectReference: {fileID: 534669904}
+    - target: {fileID: 848680879, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
+      propertyPath: secondCam
+      value: 
+      objectReference: {fileID: 972489972}
+    - target: {fileID: 848680879, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
+      propertyPath: thirdCam
+      value: 
+      objectReference: {fileID: 1285194484}
+    - target: {fileID: 848680879, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
+      propertyPath: firstLight
+      value: 
+      objectReference: {fileID: 840175135}
+    - target: {fileID: 848680879, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
+      propertyPath: secondLight
+      value: 
+      objectReference: {fileID: 1912485600}
+    - target: {fileID: 848680879, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
+      propertyPath: thirdLight
+      value: 
+      objectReference: {fileID: 456510708}
+    - target: {fileID: 848680879, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
+      propertyPath: counter
+      value: 
+      objectReference: {fileID: 1685362140}
+    - target: {fileID: 848680879, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
+      propertyPath: counter1
+      value: 
+      objectReference: {fileID: 202643339}
     - target: {fileID: 1350857201, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
       propertyPath: counter
       value: 
@@ -3956,44 +3972,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 848680879, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
-      propertyPath: caught
-      value: 
-      objectReference: {fileID: 1012593199}
-    - target: {fileID: 848680879, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
-      propertyPath: firstCam
-      value: 
-      objectReference: {fileID: 534669904}
-    - target: {fileID: 848680879, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
-      propertyPath: secondCam
-      value: 
-      objectReference: {fileID: 972489972}
-    - target: {fileID: 848680879, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
-      propertyPath: thirdCam
-      value: 
-      objectReference: {fileID: 1285194484}
-    - target: {fileID: 848680879, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
-      propertyPath: firstLight
-      value: 
-      objectReference: {fileID: 840175135}
-    - target: {fileID: 848680879, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
-      propertyPath: secondLight
-      value: 
-      objectReference: {fileID: 1912485600}
-    - target: {fileID: 848680879, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
-      propertyPath: thirdLight
-      value: 
-      objectReference: {fileID: 456510708}
-    - target: {fileID: 848680879, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
-      propertyPath: counter
-      value: 
-      objectReference: {fileID: 1685362140}
-    - target: {fileID: 848680879, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
-      propertyPath: counter1
-      value: 
-      objectReference: {fileID: 202643339}
     - target: {fileID: 1824340380413091, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
       propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 240969019, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

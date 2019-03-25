@@ -763,7 +763,6 @@ GameObject:
   - component: {fileID: 379521106}
   - component: {fileID: 379521105}
   - component: {fileID: 379521104}
-  - component: {fileID: 379521103}
   m_Layer: 0
   m_Name: floor
   m_TagString: Untagged
@@ -785,19 +784,6 @@ Transform:
   m_Father: {fileID: 927410327}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &379521103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 379521101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cc10cc6228eaab4881e2085de126038, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mf: {fileID: 379521101}
 --- !u!65 &379521104
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1053,6 +1039,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Student
       objectReference: {fileID: 0}
+    - target: {fileID: 848680879, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
+      propertyPath: firstCam
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 848680879, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
+      propertyPath: secondCam
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 848680879, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
+      propertyPath: thirdCam
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 848680879, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
+      propertyPath: firstLight
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 848680879, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
+      propertyPath: secondLight
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 848680879, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
+      propertyPath: thirdLight
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 848680879, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
+      propertyPath: caught
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1350857201, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
       propertyPath: counter
       value: 
@@ -1100,34 +1114,6 @@ PrefabInstance:
     - target: {fileID: 4549428611729446, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 848680879, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
-      propertyPath: firstCam
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 848680879, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
-      propertyPath: secondCam
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 848680879, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
-      propertyPath: thirdCam
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 848680879, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
-      propertyPath: firstLight
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 848680879, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
-      propertyPath: secondLight
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 848680879, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
-      propertyPath: thirdLight
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 848680879, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
-      propertyPath: caught
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1824340380413091, guid: 0e74cf81e6fd82546b4797f71ceffb81, type: 3}
       propertyPath: m_PlayOnAwake

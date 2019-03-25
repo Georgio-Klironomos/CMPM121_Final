@@ -6,32 +6,26 @@ using UnityEngine.SceneManagement;
 
 public class SoundTrack : MonoBehaviour
 {
-    private AudioSource _audioSource;
+    private AudioSource audioSource;
     private int buildNum = 0;
     
-
     void Update() {
         Scene scene = SceneManager.GetActiveScene();
         buildNum = scene.buildIndex;
         if(buildNum > 3 ) {
             Destroy(this.gameObject);
         }
+        else if(buildNum == 3) {
+            audioSource.pitch = 1.5f;
+        }
+        else {
+            audioSource.pitch = 1f;
+        }
     }
      private void Awake()
      {
             DontDestroyOnLoad(transform.gameObject);
         
-         _audioSource = GetComponent<AudioSource>();
-     }
- 
-     public void PlayMusic()
-     {
-         if (_audioSource.isPlaying) return;
-         _audioSource.Play();
-     }
- 
-     public void StopMusic()
-     {
-         _audioSource.Stop();
+         audioSource = GetComponent<AudioSource>();
      }
 }
